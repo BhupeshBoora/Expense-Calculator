@@ -24,3 +24,10 @@ Base Features:
 
 Optional Features:
     1. Ability to Update or Delete an Expense
+
+
+    user: "postgres" || process.env.dbUsername,
+    host: "localHost" || process.env.dbHost,
+    database: "Expenses" || process.env.dbDatabase,
+    password: "Prototype@2nd" || process.env.dbPassword,
+    port: 5433 || process.env.dbPort

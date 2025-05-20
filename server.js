@@ -2,18 +2,20 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import PDFDocument from "pdfkit";
+import dotenv from "dotenv";
 
+dotenv.config();
 const myApp = express();
-const myPort = 3000;
+const myPort = process.env.port;
 const today = new Date().toISOString().split('T')[0];
 
 const db = new pg.Client
 ({
-    user: "postgres",
-    host: "localhost",
-    database: "Expenses",
-    password: "Prototype@2nd",
-    port: 5433
+    user: process.env.dbUsername,
+    host: process.env.dbHost,
+    database: process.env.dbDatabase,
+    password: process.env.dbPassword,
+    port: process.env.dbPort
 });
 
 db.connect();
