@@ -5,6 +5,7 @@ import pg from "pg";
 const myApp = express();
 const myPort = 3000;
 const today = new Date().toISOString().split('T')[0];
+
 const db = new pg.Client
 ({
     user: "postgres",
@@ -14,19 +15,14 @@ const db = new pg.Client
     port: 5433
 });
 
+db.connect();
 myApp.use(bodyParser.urlencoded({extended:true}));
 myApp.use(express.static("public"));
-db.connect();
+
 
 myApp.get("/", (req, res) =>
 {
-    res.render("index.ejs",
-        {
-            today: 200,
-            thisWeek: 500,
-            thisMonth: 1000
-        }
-    );
+    res.render("index.ejs");
 });
 
 myApp.post("/add", async (req, res) =>
