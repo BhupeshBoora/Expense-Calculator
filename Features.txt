@@ -2,7 +2,7 @@ Base Features:
     1. Add Expense
         i. Enter Amount
        ii. Select catagory
-      iii. Select Date (Today or Custom)
+      iii. Select Date
 
     2. Money Spent: (/details, which details, that'll be specified using a variable in the request)
         i. Today
