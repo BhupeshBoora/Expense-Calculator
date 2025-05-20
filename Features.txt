@@ -1,0 +1,26 @@
+Base Features:
+    1. Add Expense
+        i. Enter Amount
+       ii. Select catagory
+      iii. Select Date (Today or Custom)
+
+    2. Money Spent: (/details, which details, that'll be specified using a variable in the request)
+        i. Today
+            > Total amount
+            > Link to view details for each catagory
+       ii. Spent This Week
+            > Total amount
+            > Link to view details for each catagory
+      iii. Spent This Month
+            > Total amount
+            > Link to view details for each catagory
+
+    3. Show Full Report (/report)
+        i. Sorts the expenses through date 
+       ii. Shows expenditure on every catagory on all of the dates
+      iii. Removes a category from report if no money was spent on it catagory that day
+       iv. Shows a total amount
+        v. Download Report in a tabular form
+
+Optional Features:
+    1. Ability to Update or Delete an Expense
